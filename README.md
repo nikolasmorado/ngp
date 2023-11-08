@@ -31,19 +31,13 @@ Before you begin, make sure you have the following software and dependencies ins
 
 4. Configure your PostgreSQL database connection by updating the database settings in the `src/config/database.config.ts` file.
 
-5. Run database migrations to set up your database schema:
+5. Start the development server:
 
    ```bash
-   pnpm run migration:run
+   pnpm start
    ```
 
-6. Start the development server:
-
-   ```bash
-   pnpm run start:dev
-   ```
-
-7. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to interact with the GraphQL API using a GraphQL playground.
+6. Open your web browser and visit [http://localhost:3000](http://localhost:3000/graphql) to interact with the GraphQL API using a GraphQL playground.
 
 <!-- ## Project Structure
 
@@ -58,7 +52,7 @@ The project structure is organized as follows:
   - `config`: Store configuration files and settings.
   - `utils`: Utility functions and helpers. -->
 
-## Testing
+<!-- ## Testing
 
 NGP provides testing utilities using Jest. You can run the following commands to perform different types of tests:
 
@@ -78,4 +72,4 @@ NGP provides testing utilities using Jest. You can run the following commands to
 
   ```bash
   pnpm run test:cov
-  ```
+  ``` -->
