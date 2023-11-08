@@ -1,73 +1,81 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# NGP (Nest.js, GraphQL, PostgreSQL) Starter
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+NGP is a starter project that combines the power of Nest.js, GraphQL, and PostgreSQL to kickstart your server-side application development. It provides a solid foundation for building efficient and scalable applications with modern technologies. Follow the steps below to get started with this project:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Prerequisites
 
-## Description
+Before you begin, make sure you have the following software and dependencies installed on your machine:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [Node.js](https://nodejs.org/): Make sure to install the latest LTS version.
+- [PostgreSQL](https://www.postgresql.org/): You'll need a PostgreSQL database instance to store your data.
 
-## Installation
+## Getting Started
 
-```bash
-$ pnpm install
-```
+1. Clone the repository to your local machine:
 
-## Running the app
+   ```bash
+   git clone https://github.com/yourusername/ngp.git
+   ```
 
-```bash
-# development
-$ pnpm run start
+2. Navigate to the project directory:
 
-# watch mode
-$ pnpm run start:dev
+   ```bash
+   cd ngp
+   ```
 
-# production mode
-$ pnpm run start:prod
-```
+3. Install the project dependencies using your preferred package manager. We recommend using [PNPM](https://pnpm.io/) for better performance:
 
-## Test
+   ```bash
+   pnpm install
+   ```
 
-```bash
-# unit tests
-$ pnpm run test
+4. Configure your PostgreSQL database connection by updating the database settings in the `src/config/database.config.ts` file.
 
-# e2e tests
-$ pnpm run test:e2e
+5. Run database migrations to set up your database schema:
 
-# test coverage
-$ pnpm run test:cov
-```
+   ```bash
+   pnpm run migration:run
+   ```
 
-## Support
+6. Start the development server:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+   ```bash
+   pnpm run start:dev
+   ```
 
-## Stay in touch
+7. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to interact with the GraphQL API using a GraphQL playground.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+<!-- ## Project Structure
 
-## License
+The project structure is organized as follows:
 
-Nest is [MIT licensed](LICENSE).
+- `src`: Contains your application source code.
+  - `controllers`: Define your API endpoints and route handlers.
+  - `modules`: Organize your application into different modules, each responsible for specific functionality.
+  - `resolvers`: Define GraphQL resolvers to handle GraphQL queries and mutations.
+  - `entities`: Define your database entities using TypeORM decorators.
+  - `services`: Implement business logic and services.
+  - `config`: Store configuration files and settings.
+  - `utils`: Utility functions and helpers. -->
+
+## Testing
+
+NGP provides testing utilities using Jest. You can run the following commands to perform different types of tests:
+
+- Unit tests:
+
+  ```bash
+  pnpm run test
+  ```
+
+- End-to-end tests:
+
+  ```bash
+  pnpm run test:e2e
+  ```
+
+- Test coverage:
+
+  ```bash
+  pnpm run test:cov
+  ```
